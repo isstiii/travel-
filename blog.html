@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+    <title>Blog - Jelajahin.co</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="nav__logo"><a href="index.html">Jelajahin.co</a></div>
+        <ul class="nav__links">
+            <li class="link"><a href="index.html">Home</a></li>
+            <li class="link"><a href="#">Blog</a></li>
+            <li class="link"><a href="service.html">Services</a></li>
+            <li class="link"><a href="contact.html">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="blog__header">
+        <div class="section__container">
+            <h1>Blog Jelajahin.co</h1>
+            <p>
+                Temukan inspirasi, panduan perjalanan, dan cerita menarik dari berbagai penjuru dunia. Blog kami membantu Anda mempersiapkan perjalanan dan membuat setiap pengalaman lebih berarti.
+            </p>
+        </div>
+    </header>
+
+    <!-- Blog Section -->
+    <section class="blog__container">
+        <div class="section__container">
+            <h2 class="section__title">Artikel Terbaru</h2>
+            <div class="blog__grid">
+                <!-- Blog Post Card -->
+                <div class="blog__card">
+                    <img src="https://i.pinimg.com/736x/ce/d9/fa/ced9fafa6da1cf3db19f2ea2e10b6f51.jpg" alt="Blog Image">
+                    <h3>Grindelwald, Switzerland</h3>
+                    <p>Terkenal karena pemandangan alamnya yang menakjubkan, Grindelwald dikelilingi oleh puncak-puncak ikonik seperti Eiger, Wetterhorn, dan Mönch. Desa ini merupakan destinasi populer untuk kegiatan outdoor seperti hiking, ski, dan snowboarding.</p>
+                </div>
+                <div class="blog__card">
+                    <img src="https://i.pinimg.com/736x/0b/30/19/0b30193e6b51a45bb134a7631f4f24f8.jpg" alt="Blog Image">
+                    <h3>Lapland, Finlandia</h3>
+                    <p>Wilayah ini terkenal dengan lanskap tundranya yang luas, hutan pinus, dan fenomena alam seperti Aurora Borealis (Cahaya Utara) yang sering terlihat di musim dingin.</p>
+                </div>
+                <div class="blog__card">
+                    <img src="https://i.pinimg.com/736x/5d/2a/5f/5d2a5f8a4203db2978a3919eb63f52a9.jpg" alt="Blog Image">
+                    <h3>Reykjavik, Iceland</h3>
+                    <p>Kota ini dikenal sebagai ibu kota paling utara di dunia dan merupakan pusat budaya, ekonomi, dan politik Islandia. Reykjavik menawarkan perpaduan unik antara pemandangan alam yang menakjubkan dan kehidupan kota yang dinamis.</p>
+                </div>
+                <div class="blog__card">
+                    <img src="https://i.pinimg.com/736x/06/fa/c3/06fac33a78404cf63e898447388b7f39.jpg" alt="Blog Image">
+                    <h3>Bali, Indonesia</h3>
+                    <p>Pulau ini dikenal dengan julukan "Pulau Dewata" karena keindahan alamnya, budaya yang kaya, dan suasana spiritual yang mendalam. Bali menawarkan kombinasi pantai berpasir putih, sawah terasering hijau, gunung berapi aktif, serta terumbu karang yang indah.</p>
+                </div>
+                <div class="blog__card">
+                    <img src="https://i.pinimg.com/736x/3a/c9/ae/3ac9aeca3d687cc5c9c5018a25cba7e8.jpg" alt="Blog Image">
+                    <h3>Komodo Island, Indonesia</h3>
+                    <p>Pulau ini menawarkan pengalaman luar biasa bagi pecinta alam dan petualangan. Selain melihat komodo di habitat aslinya, wisatawan dapat menikmati aktivitas seperti snorkeling dan diving.</p>
+                </div>
+                <div class="blog__card">
+                    <img src="https://i.pinimg.com/736x/90/1c/bd/901cbd22dd1941e580a5b7b7000334e9.jpg" alt="Blog Image">
+                    <h3>Reykjavik: Kota di Tengah Keajaiban Alam</h3>
+                    <p>Kota suci utama bagi umat Islam, terletak di wilayah barat Arab Saudi. Kota ini menjadi pusat spiritual Islam karena merupakan tempat kelahiran Nabi Muhammad SAW dan lokasi Ka'bah, struktur suci yang berada di dalam Masjidil Haram.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="section__container">
+            <h4>Jelajahin.co</h4>
+            <div class="sosial__icons">
+                <span><i class="ri-facebook-fill"></i></span>
+                <span><i class="ri-twitter-x-fill"></i></span>
+                <span><i class="ri-instagram-line"></i></span>
+                <span><i class="ri-linkedin-box-fill"></i></span>
+            </div>
+            <p>Perjalanan membuat seseorang sederhana. Kamu lihat betapa kecilnya tempat yang kamu tempati di dunia ini.</p>
+        </div>
+    </footer>
+    <script>
+    // Efek hover pada blog card
+const blogCards = document.querySelectorAll('.blog__card');
+blogCards.forEach(card => {
+    card.addEventListener('mouseover', () => {
+        card.style.boxShadow = '0 8px 15px rgba(0, 0, 0, 0.2)';
+        card.style.transform = 'scale(1.02)';
+        card.style.transition = 'all 0.3s ease';
+    });
+    card.addEventListener('mouseout', () => {
+        card.style.boxShadow = 'none';
+        card.style.transform = 'scale(1)';
+    });
+});
+
+// Scroll ke atas
+const scrollToTopButton = document.createElement('button');
+scrollToTopButton.textContent = 'Scroll to Top';
+scrollToTopButton.style.position = 'fixed';
+scrollToTopButton.style.bottom = '20px';
+scrollToTopButton.style.right = '20px';
+scrollToTopButton.style.padding = '10px 15px';
+scrollToTopButton.style.fontSize = '16px';
+scrollToTopButton.style.backgroundColor = '#007bff';
+scrollToTopButton.style.color = 'white';
+scrollToTopButton.style.border = 'none';
+scrollToTopButton.style.borderRadius = '5px';
+scrollToTopButton.style.cursor = 'pointer';
+scrollToTopButton.style.display = 'none';
+scrollToTopButton.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+document.body.appendChild(scrollToTopButton);
+
+// Tampilkan tombol saat scroll lebih dari 200px
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        scrollToTopButton.style.display = 'block';
+    } else {
+        scrollToTopButton.style.display = 'none';
+    }
+});
+
+// Aksi scroll ke atas saat tombol diklik
+scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Notifikasi klik blog card
+blogCards.forEach(card => {
+    card.addEventListener('click', () => {
+        const title = card.querySelector('h3').textContent;
+        alert( "${title}");
+    });
+});
+</script>
+</body>
+</html>
